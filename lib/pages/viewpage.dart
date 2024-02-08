@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patients/model/model.dart';
 
 
 class ViewPage extends StatefulWidget {
@@ -37,7 +38,7 @@ class _ViewPageState extends State<ViewPage> {
                     children: [
                       ListTile(
                         title: Text("Name : "+snapshot.data![index].name.toString()),
-                        subtitle: Text("Symptomes: "+snapshot.data![index].symptomes.toString()+ "\n" +"Mobile : "+snapshot.data![index].mobile.toString()+ "\n" +"Status : "+snapshot.data![index].status.toString()),
+                        subtitle: Text("Symptom: "+snapshot.data![index].symptom.toString()+ "\n" +"Mobile : "+snapshot.data![index].phone.toString()+ "\n" +"Status : "+snapshot.data![index].status.toString()),
                         leading: CircleAvatar(
                           child: Text(snapshot.data![index].name[0]),
                         ),
