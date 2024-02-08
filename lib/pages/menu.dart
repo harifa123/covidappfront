@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:patients/pages/addpage.dart';
+import 'package:patients/pages/search.dart';
 import 'package:patients/pages/viewpage.dart';
 
 
