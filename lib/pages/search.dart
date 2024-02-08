@@ -70,7 +70,7 @@ class _SearchPageState extends State<SearchPage> {
                       return ListTile(
                         tileColor: Colors.lightBlueAccent.withOpacity(0.3),
                         title: Text("Name: "+patient.name),
-                        subtitle: Text("Mobile No: "+patient.phone+ "\n" +"Symptomes: "+patient.symptom + "\n" +"Status: "+patient.status+ "\n" +"Address: "+patient.address,style: TextStyle(color: Colors.black),),
+                        subtitle: Text("Mobile No: "+patient.phone+ "\n" +"Symptom: "+patient.symptom + "\n" +"Status: "+patient.status+ "\n" +"Address: "+patient.address,style: TextStyle(color: Colors.black),),
                         leading: CircleAvatar(
                           child: Text(patient.name[0]),
                         ),
