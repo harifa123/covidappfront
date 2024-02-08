@@ -9,21 +9,24 @@ class AddPage extends StatefulWidget {
 
 class _AddPageState extends State<AddPage> {
   String name="";
-  String symptomes="";
-  String mobile="";
+  String symptom="";
+  String phone="";
   String status="";
+  String address="";
   TextEditingController n1 = new TextEditingController();
   TextEditingController n2 = new TextEditingController();
   TextEditingController n3 = new TextEditingController();
   TextEditingController n4 = new TextEditingController();
+  TextEditingController n5 = new TextEditingController();
 
   void SendApi() async
   {
     name = n1.text;
-    symptomes = n2.text;
-    mobile = n3.text;
+    symptom = n2.text;
+    phone = n3.text;
     status = n4.text;
-    final response = await WelcomeApiService().sendData(name,symptomes,mobile,status);
+    address = n5.text;
+    final response = await WelcomeApiService().sendData(name,symptom,phone,status,address);
     if(response["status"]=="success")
     {
       showSimplePopup(context, "Success!");
@@ -65,7 +68,7 @@ class _AddPageState extends State<AddPage> {
                 style: TextStyle(color: Colors.black),
                 controller: n2,
                 decoration: InputDecoration(
-                  labelText: "symptomes",
+                  labelText: "symptom",
                   labelStyle: TextStyle(color: Colors.black),
                 ),
               ),
@@ -76,7 +79,7 @@ class _AddPageState extends State<AddPage> {
                 style: TextStyle(color: Colors.black),
                 controller: n3,
                 decoration: InputDecoration(
-                  labelText: "mobile",
+                  labelText: "phone",
                   labelStyle: TextStyle(color: Colors.black),
                 ),
               ),
@@ -88,6 +91,17 @@ class _AddPageState extends State<AddPage> {
                 controller: n4,
                 decoration: InputDecoration(
                   labelText: "status",
+                  labelStyle: TextStyle(color: Colors.black),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextField(
+                style: TextStyle(color: Colors.black),
+                controller: n5,
+                decoration: InputDecoration(
+                  labelText: "address",
                   labelStyle: TextStyle(color: Colors.black),
                 ),
               ),
