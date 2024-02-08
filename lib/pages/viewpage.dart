@@ -38,7 +38,7 @@ class _ViewPageState extends State<ViewPage> {
                     children: [
                       ListTile(
                         title: Text("Name : "+snapshot.data![index].name.toString()),
-                        subtitle: Text("Symptom: "+snapshot.data![index].symptom.toString()+ "\n" +"Mobile : "+snapshot.data![index].phone.toString()+ "\n" +"Status : "+snapshot.data![index].status.toString()),
+                        subtitle: Text("Symptom: "+snapshot.data![index].symptom.toString()+ "\n" +"Mobile : "+snapshot.data![index].phone.toString()+ "\n" +"Status : "+snapshot.data![index].status.toString()+"\n" +"Status : "+snapshot.data![index].address.toString()),
                         leading: CircleAvatar(
                           child: Text(snapshot.data![index].name[0]),
                         ),
